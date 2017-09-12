@@ -26,11 +26,19 @@ request(url,(error,res,body)=>{
 
 function parseHtml(body){
     $ = cheerio.load(body);
-    let txt ='';
+    let txt ='',
+        $errorTypo = null;
     if(!isCN){
-        txt = $('#phrsListTab .trans-container ul li').map(function(i,el){
-            return getRawText(this);
-        }).get().join('\n');
+        $errorTypo = $('.error-typo');
+        if($errorTypo.children().length){
+            txt = $errorTypo.children().map(function(i,el){
+                return getRawText(this);
+            }).get().join('\n');
+        }else {
+            txt = $('#phrsListTab .trans-container ul li').map(function(i,el){
+                return getRawText(this);
+            }).get().join('\n');
+        }
     }else{
         txt =$('#phrsListTab .trans-container ul .wordGroup').map(function(i,el){
             return getRawText($(this));
