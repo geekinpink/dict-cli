@@ -1,5 +1,5 @@
 ### 中英互译的命令行工具
-基于[有道词典](www.dict.youdao.com)的词典命令行工具，支持中译英和英译中两种功能。
+基于[有道词典](http://www.dict.youdao.com)的词典命令行工具，支持中译英和英译中两种功能。
 #### 安装
 ```
 git clone https://github.com/geekinpink/dict-cli.git
