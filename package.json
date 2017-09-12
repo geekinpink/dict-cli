@@ -1,6 +1,6 @@
 {
   "name": "dic-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a dictionary cli tools base on youdao api",
   "main": "index.js",
   "scripts": {
